@@ -1,0 +1,33 @@
+GET /monitor-update?mb_port=502 HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+sec-ch-ua-platform: "Windows"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+sec-ch-ua: "Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8080/monitoring
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9,id;q=0.8,ms;q=0.7
+Cookie: session=.eJw9zk0KwjAQBtC7ZO0i_5npZUo68w0KWktaV-LdLQge4MF7u9kG9qubjvHCxc03dZOTGIMyUDj1ZrGQcEZCUDNWKT1wsxK7typNFTFpIJ8XqUQIXLoQeguJSoukAHPzmtjApzSIr0YavU8L-SgZhp7I8lI9cqshkzsjG8ajr1iPf-21Y_x-zw3rdhf3-QIVlzlM.aGnmEw.JdFvE4QReSLC-t9KSEnO5XBim7w
+
+
+HTTP/1.1 200 OK
+Server: Werkzeug/2.3.7 Python/3.12.11
+Date: Sun, 06 Jul 2025 02:57:24 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 1296
+Vary: Cookie
+Set-Cookie: session=.eJw9zk0KwjAQBtC7ZO0i_5npZUo68w0KWktaV-LdLQge4MF7u9kG9qubjvHCxc03dZOTGIMyUDj1ZrGQcEZCUDNWKT1wsxK7typNFTFpIJ8XqUQIXLoQeguJSoukAHPzmtjApzSIr0YavU8L-SgZhp7I8lI9cqshkzsjG8ajr1iPf-21Y_x-zw3rdhf3-QIVlzlM.aGnmFA.WrIsBEhb-C8buQ6flWplak42XRc; Expires=Sun, 06 Jul 2025 03:02:24 GMT; HttpOnly; Path=/
+Connection: close
+
+
+                        <table>
+                            <col width="50"><col width="10"><col width="10"><col width="10"><col width="100">
+                            <tr style='background-color: white'>
+                                <th>Point Name</th><th>Type</th><th>Location</th><th>Write</th><th>Value</th>
+                            </tr><tr style="height:60px"><td>Start</td><td>BOOL</td><td>%IX100.0</td><td></td><td valign="middle"><img src="/static/bool_false.png" alt="bool_false" style="width:40px;height:40px;vertical-align:middle; margin-right:10px">FALSE</td></tr><tr style="height:60px"><td>Stop</td><td>BOOL</td><td>%IX100.1</td><td></td><td valign="middle"><img src="/static/bool_true.png" alt="bool_true" style="width:40px;height:40px;vertical-align:middle; margin-right:10px">TRUE</td></tr><tr style="height:60px"><td>Motor</td><td>BOOL</td><td>%QX100.0</td><td><button class="write-button true" onclick="fetch('/point-write?value=1&address=%QX100.0')">true</button><button class="write-button false" onclick="fetch('/point-write?value=0&address=%QX100.0')">false</button></td><td valign="middle"><img src="/static/bool_false.png" alt="bool_false" style="width:40px;height:40px;vertical-align:middle; margin-right:10px">FALSE</td></tr> 
+                        </table>
